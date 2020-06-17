@@ -4,7 +4,7 @@ import MyComponent from './myComponent';
 const App = () => {
   return (
     <div>
-      <MyComponent />
+      <MyComponent>리액트</MyComponent>
     </div>
   );
 };
