@@ -3,6 +3,9 @@ import Counter from './Counter';
 import Say from './Say';
 import MyComponent from './myComponent';
 import EventPracticeFuc from './EventPracticeFuc';
+import ValidationSample from './ValidationSample';
+import RefSample from './RefSample';
+import ScrollBox from './ScrollBox';
 
 const App = () => {
   return (
@@ -14,6 +17,12 @@ const App = () => {
       <Say />
       <p />
       <EventPracticeFuc />
+      <p/>
+      <ValidationSample />
+      <p/>
+      <RefSample/>
+      <p/>
+      <ScrollBox />
     </div>
   );
 };
