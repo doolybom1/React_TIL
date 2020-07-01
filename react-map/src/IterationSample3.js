@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-// 데이터 추가
-const IterationSample2 = () => {
+// 데이터 삭제
+const IterationSample3 = () => {
     const [names, setNames] = useState([
         { id : 1, text: '리액트'},
         { id : 2, text: '뷰'},
@@ -10,8 +10,12 @@ const IterationSample2 = () => {
     ]);
     const [inputText, setInputText] = useState('');
     const [nextId, setNextId] = useState(5); // 새로운 항목 추가할때 사용하는 id
-    const nameList = names.map((name) => <li key={name.id}>{name.text}</li>)
-    
+    const nameList = names.map(name => (
+        <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+            {name.text}
+        </li>
+    ));
+
     const onChange = e => {
         setInputText(e.target.value)
     }
@@ -26,6 +30,11 @@ const IterationSample2 = () => {
         setInputText('');
     }
 
+    const onRemove = id => {
+        const nextNames = names.filter(name => name.id !== id);
+        setNames(nextNames);
+    };
+
     return (
         <div>
             <ul>
@@ -37,4 +46,4 @@ const IterationSample2 = () => {
     );
 };
 
-export default IterationSample2;
+export default IterationSample3;
