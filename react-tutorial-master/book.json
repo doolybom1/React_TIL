@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "collapsible-chapters",
+    "comment",
+    "hide-published-with",
+    "github",
+    "edit-link"
+  ],
+  "pluginsConfig": {
+    "collapsible-chapters": {},
+    "github": {
+      "url": "https://github.com/doolybom1?tab=repositories"
+    },
+    "edit-link": {
+      "base": "https://github.com/doolybom1?tab=repositories",
+      "label": "수정 요청하기"
+    }
+  }
+}
