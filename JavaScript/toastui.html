@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://uicdn.toast.com/grid/v4.14.0/tui-grid.css" />
+        <script src="https://uicdn.toast.com/grid/v4.14.0/tui-grid.js"></script>
+    </head>
+        <body>
+            <div id="grid"></div>
+        </body>
+        <script>
+var gridData = [
+    {
+       name: 'Beautiful Lies',
+       artist: 'Birdy',
+       release: '2016.03.26',
+       type: 'Deluxe',
+       genre: 'Pop'
+     },
+     {
+       name: 'X',
+       artist: 'Ed Sheeran',
+       release: '2014.06.24',
+       type: 'Deluxe',
+       genre: 'Pop',
+       _attributes: {
+         disabled: true // A current row is disabled
+       }
+     },
+     {
+       name: 'Moves Like Jagger',
+       release: '2011.08.08',
+       artist: 'Maroon5',
+       type: 'Single',
+       genre: 'Pop,Rock',
+       _attributes: {
+         checkDisabled: true // A checkbox is disabled only
+       }
+     },
+     
+     {
+       name: '25',
+       artist: 'Adele',
+       release: '2015.11.20',
+       type: 'EP',
+       genre: 'Pop',
+       _attributes: {
+         className: { // Add class name on each columns
+           column: {
+             type: ['blue'],
+             genre: ['blue']
+           }
+         }
+       }
+     }
+   ];
+
+var grid = new tui.Grid({
+   el: document.getElementById('grid'),
+   data: gridData,
+   scrollX: false,
+   scrollY: false,
+   columns: [
+     {
+       header: 'Name',
+       name: 'name'
+     },
+     {
+       header: 'Artist',
+       name: 'artist'
+     },
+     {
+       header: 'Type',
+       name: 'type'
+     },
+     {
+       header: 'Release',
+       name: 'release'
+     },
+     {
+       header: 'Genre',
+       name: 'genre'
+     }
+   ]
+ });
+</script>
+</html>

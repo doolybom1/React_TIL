@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Page from './Page';
 import * as serviceWorker from './serviceWorker';
 
+const message = ['react', 'Re:React'];
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+   <App unreadMessages={message}/>
+    <Page />
   </React.StrictMode>,
   document.getElementById('root')
 );
