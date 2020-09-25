@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Page.css"
 
 function WarningBanner(props){
     if(!props.warn){
